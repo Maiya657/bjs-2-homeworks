@@ -86,7 +86,7 @@ class Library {
 		for (let i = 0; i < this.books.length; i++) {
 			const book = this.books[i];
 			if (book !== undefined && book.name === bookName) {
-				delete this.books[i];
+        this.books.splice(i);
 				return book;
 			}
 		}

@@ -7,13 +7,12 @@
 }
 
 function validateCount(count) {
-	let result = 0;
 	try {
-		result = parseCount(count);
-	} catch (e) {
-		return e;
+		return parseCount(count);
+	} catch (error) {
+		console.log(error);
+    return error;
 	}
-	return result;
 }
 
 class Triangle {
@@ -39,7 +38,7 @@ class Triangle {
 function getTriangle(a, b, c) {
 	try {
 		return new Triangle(a, b, c);
-	} catch (e) {
+	} catch (error) {
 		return {
 			get area() {
 				return 'Ошибка! Треугольник не существует'
